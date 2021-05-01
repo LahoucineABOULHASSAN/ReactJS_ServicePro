@@ -1,0 +1,28 @@
+.features {
+  padding: 0 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 4rem;
+}
+.features div {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.features div i {
+  color: var(--primary);
+}
+.features div p {
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 728px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 520px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
