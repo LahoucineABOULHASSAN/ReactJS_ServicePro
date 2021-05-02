@@ -26,6 +26,9 @@ export const navReducer = (state, action) => {
     case "IS_ACTIVE":
       isActive(action.event, action.elem);
       return state;
+    case "TO_TOP":
+      scrollTo(action.elem);
+      return state;
     case "DISPLAY_NAV":
       display();
       return state;

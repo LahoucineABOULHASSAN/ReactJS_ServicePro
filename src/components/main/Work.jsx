@@ -1,10 +1,10 @@
-import '../../stylesheets/work.css';
+import "../../stylesheets/work.css";
 const Work = () => {
   const works = [
-    { item: 'Work Hours', value: 500 },
-    { item: 'Great Reviews', value: 500 },
-    { item: 'Projects Done', value: 500 },
-    { item: 'Awards Won', value: 500 },
+    { item: "Work Hours", value: 500 },
+    { item: "Great Reviews", value: 500 },
+    { item: "Projects Done", value: 500 },
+    { item: "Awards Won", value: 500 },
   ];
   return (
     <section id="work" className=" work grid">
@@ -23,7 +23,7 @@ const Work = () => {
       </div>
       <ul id="nbrs" className="grid">
         {works.map((work) => (
-          <li key={work.value}>
+          <li key={work.item}>
             <span className="nbr">{work.value}</span>
             <p>{work.item}</p>
           </li>
