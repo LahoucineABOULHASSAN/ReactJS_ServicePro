@@ -73,6 +73,65 @@ ul {
 .to-right {
   float: right;
 }
+/* Loading Styling */
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.loading h2 {
+  margin-bottom: 2rem;
+}
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid var(--dark);
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 3s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Error styling */
+#error {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#error h1 {
+  font-size: 2rem;
+  word-spacing: 15px;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+.error {
+  padding: 2rem;
+  font-size: 1.3rem;
+  border-radius: 15px;
+  background: #e28c9cbf;
+}
 /* media queries */
 @media screen and (min-width: 1368px) {
   #root {

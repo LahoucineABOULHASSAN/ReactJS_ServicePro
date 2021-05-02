@@ -91,15 +91,12 @@ footer span span {
   display: flex;
   cursor: pointer;
   color: var(--dark);
-  position: absolute;
+  position: fixed;
   border-radius: 50%;
   justify-items: center;
   flex-direction: column;
   justify-content: center;
   background: var(--primary);
-}
-.fix-to-top {
-  position: fixed;
 }
 /* Media Queries */
 @media screen and (max-width: 768px) {

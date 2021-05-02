@@ -1,20 +1,20 @@
-import ServicesContextProvider from '../contexts/ServicesContext';
-import '../stylesheets/main.css';
-import About from './main/About';
-import Features from './main/Features';
-import Services from './main/Services';
-import Work from './main/Work';
+import ServicesContextProvider from "../contexts/ServicesContext";
+import "../stylesheets/main.css";
+import About from "./main/About";
+import Features from "./main/Features";
+import Services from "./main/Services";
+import Work from "./main/Work";
 const Main = () => {
   let isScrolled = false;
   const fixTop = () => {
-    const nav = document.getElementById('myTopnav');
+    const nav = document.getElementById("myTopnav");
     if (
       document.body.scrollTop > 36 ||
       document.documentElement.scrollTop > 36
     ) {
-      nav.classList.add('sticky');
+      nav.classList.add("sticky");
     } else {
-      nav.classList.remove('sticky');
+      nav.classList.remove("sticky");
     }
   };
   const incEltNbr = (elem) => {
@@ -31,7 +31,7 @@ const Main = () => {
     }
   };
   const increase = () => {
-    const items = document.querySelectorAll('.nbr');
+    const items = document.querySelectorAll(".nbr");
     items.forEach((item) => incEltNbr(item));
     isScrolled = true;
   };
@@ -39,17 +39,11 @@ const Main = () => {
     // fix nav on top
     fixTop();
     // numbers increament
-    const item = document.getElementById('nbrs');
-    const services = document.getElementById('our-services');
-    const btn = document.querySelector('.to-top');
+    const item = document.getElementById("nbrs");
     let shouldAnimate = window.scrollY + window.innerHeight >= item.offsetTop;
-    let shouldStick = window.scrollY + window.innerHeight >= services.offsetTop;
     if (shouldAnimate && !isScrolled) {
       increase();
     }
-    if (shouldStick) {
-      btn.classList.add('fix-to-top');
-    } else btn.classList.remove('fix-to-top');
   };
   return (
     <ServicesContextProvider>
